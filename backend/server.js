@@ -19,7 +19,7 @@ app.use(cookieParser()); // <--- Use Cookie Parser
 // CORS MUST be specific for Cookies to work
 app.use(
   cors({
-    origin: "http://localhost:5173", // Your Frontend URL exactly
+    origin: `${process.env.FRONTEND_URL}`, // Your Frontend URL exactly
     credentials: true, // Allow cookies to be sent
   })
 );
